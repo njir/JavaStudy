@@ -21,7 +21,7 @@ public class StringCalculator {
             return text.split(",|:");
     }
 
-    private int[] strArrayToIntArray(String[] strArray){
+    private int[] IntArray(String[] strArray){
         return Arrays.stream(strArray).mapToInt(Integer::parseInt).toArray();
     }
 
@@ -29,6 +29,6 @@ public class StringCalculator {
         if(isNull(text))
             return 0;
         String[] strNumbers = spliter(text);
-        return IntStream.of(strArrayToIntArray(strNumbers)).sum();
+        return IntStream.of(IntArray(strNumbers)).sum();
     }
 }
